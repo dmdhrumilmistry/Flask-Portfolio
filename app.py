@@ -9,7 +9,7 @@ import re
 
 # create flask app
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
 
 # sqlite3 database
 db = SQLAlchemy(app)
@@ -87,7 +87,3 @@ def contact_page():
 @app.route('/projects')
 def projects_page():
     return render_template('projects.html', title="Projects", cards=get_projects())
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
