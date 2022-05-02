@@ -1,5 +1,4 @@
 flask
-pymongo
 requests
 flask-migrate
 waitress
