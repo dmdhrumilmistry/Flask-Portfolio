@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block headersection %}
+
+<section class="header-container">
+  <img class="profile-image" src="https://avatars.githubusercontent.com/u/56185972" alt="" />
+  <h1>Hey Visitor! I'm Dhrumil Mistry</h1>
+
+  <div class="content-text">
+    <h2>Open Source Dev</h2>
+    <p>
+      Can communicate in ASM, C, C++, JAVA, Go, Python and Javascript<br>I create Web Services and Products
+    </p>
+  </div>
+  <a href="#footer" class="btn btn-secondary">Connect With Me</a>
+</section>
+{% endblock %}
+
+{% block body %}
+<section id="projects" class="project-container container">
+  <div class="division"></div>
+
+  <div class="content-text">
+    <h2>Special Skills</h2>
+    <div class="container">
+      <table style="text-align: center;">
+        <tr>
+          <td  style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fab fa-cogs"></i></h2>
+              <h4>Reverse Engineering</h4>
+            </div>
+          </td>
+          <td  style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fab fa-bug"></i></h2>
+              <h4>Creating Undetectable Evil Files</h4>
+            </div>
+          </td>
+          <td  style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fab fa-code"></i></h2>
+              <h4>Creating CLI tools</h4>
+            </div>
+          </td>
+          <td  style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fab fa-server"></i></h2>
+              <h4>Virtualization</h4>
+            </div>
+          </td>
+          <td  style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fab fa-cloud"></i></h2>
+              <h4>Cloud</h4>
+            </div>
+          </td>
+          <td  style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fab fa-linux"></i></h2>
+              <h4>Linux</h4>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>    
+  </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects" class="project-container container">
+  <div class="division"></div>
+
+  <div class="content-text">
+    <h2>Popular Project</h2>
+    <p>Check out some of my projects</p>
+  </div>
+
+  <div class="container">
+    <div class="textcard">
+      <table>
+        <tr>
+          <td>
+            <img src="https://github.com/dmdhrumilmistry/pyhtools/blob/main/.images/PyHTools.png?raw=True"
+              alt="Pyhtools image" style="width: auto; max-width: 100%;">
+          </td>
+          <td>
+            <div class="container">
+              <h3>PyHtools</h3>
+              <p style="text-align: justify;">Python Hacking Tools (PyHTools) (pht) is a collection of python written
+                hacking
+                tools consisting of network
+                scanner, arp spoofer and detector, dns spoofer, code injector, packet sniffer, network jammer, email
+                sender,
+                downloader, wireless password harvester credential harvester, keylogger, download&execute, and
+                reverse_backdoor along with website login bruteforce, scraper, web spider etc. PHT also includes
+                malwares
+                which are undetectable by the antiviruses.</p>
+              <a href="https://github.com/dmdhrumilmistry/pyhtools" class="btn btn-secondary">View Project <i class="fab fa-github"></i></a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <a href="{{url_for('projects_page')}}" class="btn btn-secondary">See More <i class="fas fa-arrow-right"></i></a>
+</section>
+{% endblock %}

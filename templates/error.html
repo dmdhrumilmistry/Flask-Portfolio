@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block headersection %}
+<section class="header-container">
+  <div class="content-text">
+    <h2>{{message}}</h2>
+  </div>
+  <a href="{{url_for('main_page')}}" class="btn btn-secondary">Go Back to HomePage</a>
+</section>
+{% endblock %}

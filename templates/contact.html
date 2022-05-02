@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block headersection %}
+<section class="header-container">
+    <div class="content-text">
+        <h2>Contact Page</h2>
+    </div>
+    <a href="#footer" class="btn btn-secondary">Connect With Me On Various Platforms</a>
+</section>
+{% endblock %}
+
+{% block body %}
+<div class="project-container container" style="padding: 100px;">
+    {% if contact_status == true %}
+    <div class="isa_success">
+        <i class="fa fa-check"></i>
+        Contact Information received
+    </div>
+    {% elif contact_status == false %}
+    <div class="isa_error">
+        <i class="fa fa-times-circle"></i>
+        Failed to store Information, enter valid information!
+    </div>
+    {% else %}
+    <div class="isa_info">
+        <i class="fa fa-info-circle"></i>
+        Enter Contact Information Below
+    </div>
+    {% endif %}
+
+    <form method="post" action="/contact">
+        <label for="name">
+            <h3>Name</h3>
+        </label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+        <label for="email">
+            <h3>Email</h3>
+        </label>
+        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+
+        <label for="contactnum">
+            <h3>Contact Number</h3>
+        </label>
+        <input type="text" id="phone" name="phone" placeholder="+919876543210" required>
+
+        <label for="subject">
+            <h3>Contact Reason</h3>
+        </label>
+        <textarea id="reason" name="reason" placeholder="Mention Contacting Reason" style="height:200px"
+            required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

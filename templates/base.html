@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>{{ title }}</title>
+
+    <!-- Link -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/56185972" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://avatars.githubusercontent.com/u/56185972" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/56185972" />
+    <link rel="icon" type="image/png" sizes="192x192" href="https://avatars.githubusercontent.com/u/56185972" />
+    <link rel="icon" type="image/png" sizes="512x512" href="https://avatars.githubusercontent.com/u/56185972" />
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/56185972" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utilities.css') }}" />
+</head>
+
+<body>
+    <header id="hero">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <!-- Logo -->
+                <h1 id="logo">
+                    <a href="/"><img src="https://avatars.githubusercontent.com/u/56185972" alt="Logo" /></a>
+                </h1>
+
+                <!-- Navbar links -->
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="{{ url_for('projects_page') }}">PROJECTS</a></li>
+                    <li><a class="nav-link" href="{{ url_for('contact_page') }}">CONTACT</a></li>
+                    <!-- <li><a class="nav-link" href="#">BlOG</a></li> -->
+                    <li>
+                        <a class="btn btn-primary" href="https://github.com/dmdhrumilmistry">RESUME <i
+                                class="fas fa-arrow-right"></i></a>
+                    </li>
+
+                    <!-- Toggle switch -->
+                    <div class="theme-switch">
+                        <input type="checkbox" id="switch" />
+                        <label class="toggle-icons" for="switch">
+                            <img class="moon" src="{{ url_for('static', filename='assets/moon.svg') }}"
+                                style="box-shadow: none;" />
+                            <img class="sun" src="{{ url_for('static', filename='assets/sun.svg') }}"
+                                style="box-shadow: none;" />
+                        </label>
+                    </div>
+
+                    <!-- Hamburger menu -->
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </ul>
+
+            </div>
+        </nav>
+        {% block headersection %}
+        {% endblock %}
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer id="footer">
+        <div class="container">
+            <a href="mailto:contact@dmdhrumilmistry.me">contact@dmdhrumilmistry.me</a>
+            <!-- Social links -->
+            <div class="social">
+                <a href="https://twitter.com/dmdhrumilmistry"><img
+                        src="{{ url_for('static', filename='assets/twitter-icon.svg') }}" alt="Twitter"
+                        style="border-radius: 0px;"></a>
+                <a href="https://linkedin.com/in/dmdhrumilmistry"><img
+                        src="{{ url_for('static', filename='assets/linkedin-icon.svg') }}" alt="Linkedin"
+                        style="border-radius: 0px;"></a>
+                <a href="https://t.me/anyonymous_dude"><img
+                        src="{{ url_for('static', filename='assets/telegram.svg') }}" alt="Telegram"></a>
+                <a href="https://github.com/dmdhrumilmistry"><img
+                        src="{{ url_for('static', filename='assets/github-icon.svg') }}" alt="GitHub"
+                        style="border-radius: 0px;"></a>
+            </div>
+            <!-- Attribution -->
+            <p>Copyright &copy; dmdhrumilmistry 2022, All rights reserved</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

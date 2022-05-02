@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- Projects -->
+<section id="projects" class="project-container container">
+    <div class="content-text">
+        <h2>Public Github Repos</h2>
+    </div>
+
+    <article class="project">
+        {% for card in cards %}
+        <!-- <div href="{{card.html_url}}" class="card" style="background: '{{card.html_url}}'">
+            <div class="project-info">
+                <div class="project-bio">
+                    <h3>{{card.name}}</h3>
+                    <p>{{card.language}}</p>
+                    <p>{{card.description}}</p>
+                </div>
+
+                <div class="project-link">
+                    <a href="{{card.html_url}}"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="textcard">
+            <div class="container">
+                <h3>{{card.name}}</h3>
+                <p>{{card.language}}</p>
+                <p>{{card.description}}</p>
+            </div>
+            <div class="container">
+                <a href="{{card.html_url}}" class="btn btn-secondary">View Project <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        {% endfor %}
+    </article>
+</section>
+{% endblock %}
