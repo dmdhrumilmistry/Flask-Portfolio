@@ -58,6 +58,16 @@ Light and Dark Theme Personal Portfolio Website written using Flask Framework in
     waitress-serve wsgi:app
     ```
 
+## Deploy using Docker
+- Build image
+  ```bash
+  docker build -t flask-portfolio .
+  ```
+- Run image
+  ```bash
+  docker run -d -p 8080:8080 flask-portfolio
+  ```
+
 ## TODO
 - [ ] Make Website Responsive
 - [ ] Create Blogs
