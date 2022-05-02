@@ -2,6 +2,19 @@
 
 Light and Dark Theme Personal Portfolio Website written using Flask Framework in Python.
 
+## Screenshots
+- Light Theme Cropped
+
+  ![Light Theme Cropped](https://github.com/dmdhrumilmistry/Flask-Portfolio/blob/main/.images/Light-Homepage-Crop.png?raw=True)
+  
+- Light Theme
+
+  ![Light Theme](https://github.com/dmdhrumilmistry/Flask-Portfolio/blob/main/.images/Light-Homepage.png?raw=True)
+
+- Dark Theme
+
+  ![Dark Theme](https://github.com/dmdhrumilmistry/Flask-Portfolio/blob/main/.images/Dark-Homepage.png?raw=True)
+
 ## Technologies Used
 - Frontend
     - HTML
