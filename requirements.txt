@@ -2,4 +2,4 @@ flask
 pymongo
 requests
 flask-migrate
-uvicorn
+waitress
