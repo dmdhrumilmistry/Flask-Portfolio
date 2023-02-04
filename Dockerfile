@@ -1,5 +1,5 @@
 # DESCRIPTION:	  Create Flask-Portfolio in Container
-# AUTHOR:		  Dhrumil Mistry <contact@dmdhrumilmistry.me>
+# AUTHOR:		  Gnanendar Reddy <contact@gnanendarreddymale77@gmail.com>
 # COMMENTS:
 #	This file describes how to build Portfolio Website
 #	in a container with all dependencies installed.
@@ -16,7 +16,7 @@
 
 FROM ubuntu
 
-LABEL maintainer "Dhrumil Mistry <contact@dmdhrumilmistry.me>"
+LABEL maintainer "Gnanendar Reddy <contact@gnanendarreddymale77@gmail.com>"
 
 # install requirements
 RUN apt update -y && apt install python3 python3-pip -y

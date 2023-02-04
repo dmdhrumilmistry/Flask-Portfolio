@@ -3,7 +3,6 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate, migrate
 
-
 import requests
 import re
 
@@ -18,6 +17,8 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 # Models
+
+
 class Contact(db.Model):
     no = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=False, nullable=False)
@@ -26,7 +27,7 @@ class Contact(db.Model):
     reason = db.Column(db.String(200), unique=True, nullable=False)
     date = db.Column(db.String(12), unique=False, nullable=True)
 
-    def __init__(self, name:str, phone:str, email:str, reason:str) -> None:
+    def __init__(self, name: str, phone: str, email: str, reason: str) -> None:
         self.name = name
         self.phone = phone
         self.email = email
@@ -38,7 +39,7 @@ class Contact(db.Model):
 
 
 def get_projects():
-    api_url = f'https://api.github.com/users/dmdhrumilmistry/repos'
+    api_url = f'https://api.github.com/users/gnany07/repos'
     cards_list = requests.get(api_url).json()
     return cards_list
 
@@ -55,7 +56,7 @@ def err_404(message):
 
 @app.route('/')
 def main_page():
-    return render_template('index.html', title='Dhrumil Mistry - Homepage')
+    return render_template('index.html', title='Gnanendar Reddy - Homepage')
 
 
 @app.route('/home')
